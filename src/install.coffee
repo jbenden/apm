@@ -166,8 +166,7 @@ class Install extends Command
           You can install Git by downloading, installing, and launching GitHub for Windows: https://windows.github.com
 
         """
-      when 'freebsd'
-      when 'linux'
+      when 'freebsd', 'linux'
         message += """
 
           You can install Git from your OS package manager.
