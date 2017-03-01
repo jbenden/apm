@@ -2,7 +2,7 @@ try
   keytar = require 'keytar'
 catch error
   # Gracefully handle keytar failing to load due to missing library on Linux
-  if process.platform is 'linux'
+  if process.platform in ['linux', 'freebsd']
     keytar =
       findPassword: ->
       replacePassword: ->

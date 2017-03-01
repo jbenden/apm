@@ -44,6 +44,7 @@ module.exports =
           [appLocation] = stdout.split('\n') unless error
           appLocation = '/Applications/Atom.app' unless appLocation
           callback("#{appLocation}/Contents/Resources/app.asar")
+      when 'freebsd'
       when 'linux'
         appLocation = '/usr/local/share/atom/resources/app.asar'
         unless fs.existsSync(appLocation)
